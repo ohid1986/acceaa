@@ -1,0 +1,25 @@
+{% extends parent_template|default:"member/base_member.html" %}
+
+{% load crispy_forms_tags %}
+
+
+{% block body %}
+
+
+        <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Executive Member Form</h3>
+      </div>
+
+                        <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {% crispy form %}
+                            <!--{% include 'member/form_template.html' %}-->
+
+
+                        </form>
+                    </div>
+
+
+
+{% endblock %}
